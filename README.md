@@ -5,9 +5,12 @@ Simply run with:
 python3 choicePicker.py picksFile.csv classesFile.csv studensFile.csv
 ```
 
-## Input files:
+## Input files
+Should be in csv without header present
+
 ### picksFile.csv
 subject,groupLimit
+
 Example:
 ```
 Slöjd,15
@@ -17,6 +20,7 @@ Matematik,15
 ```
 ### classes.csv
 class
+
 Example:
 ```
 5a,
@@ -27,6 +31,7 @@ Example:
 ```
 ### students.csv
 name,class,pick1,pick2,pick3,pick4
+
 Example:
 ```
 Kim,5a,Slöjd,Idrott,Bild,Matematik
