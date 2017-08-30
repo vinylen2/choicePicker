@@ -1,3 +1,9 @@
+import sys
+
+picks = sys.argv[1]
+classes = sys.argv[2]
+students = sys.argv[3]
+
 classLimit = 3
 pickLimit = 4
 sneakyStudents = []
@@ -54,9 +60,9 @@ def addOddStudent(nameOfStudent, nameOfClass, reason):
     sneakyStudents.append(nameOfStudent + "," + nameOfClass + "," + "ej placerad" + "," + reason)
 
 
-arrayOfClasses = createArrayFromCSV("classes.csv")
-allChoices = createDictFromCSV("picks.csv", arrayOfClasses)
-arrayOfStudents = createArrayFromCSV("students.csv")
+arrayOfClasses = createArrayFromCSV(classes)
+allChoices = createDictFromCSV(picks, arrayOfClasses)
+arrayOfStudents = createArrayFromCSV(students)
 
 for student in arrayOfStudents:
     studentArray = student.split(",")
