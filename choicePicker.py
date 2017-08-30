@@ -57,7 +57,7 @@ def createDictFromCSV(filename, array):
     return aDict
 
 def addOddStudent(nameOfStudent, nameOfClass, reason):
-    sneakyStudents.append(nameOfStudent + "," + nameOfClass + "," + "ej placerad" + "," + reason)
+    sneakyStudents.append(nameOfStudent + "," + nameOfClass + "," + "" + "," + reason)
 
 
 arrayOfClasses = createArrayFromCSV(classes)
@@ -90,6 +90,7 @@ for student in arrayOfStudents:
 
 
 fileForPicks = open("sortedPicks.csv", "w")
+fileForPicks.write("namn,klass,val,kommentar \n")
 
 for pick in allChoices:
     for student in allChoices[pick].students:
