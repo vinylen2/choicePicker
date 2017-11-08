@@ -1,10 +1,11 @@
 import sys
+import random
 
 picks = sys.argv[1]
 classes = sys.argv[2]
 students = sys.argv[3]
 
-classLimit = 3
+classLimit = 4
 pickLimit = 4
 sneakyStudents = []
 
@@ -85,7 +86,7 @@ for student in arrayOfStudents:
             else:
                 pass
             count += 1
-        if (pick and count == 4):
+        if (pick and count == 3):
             addOddStudent(studentName, studentClass, "ingen plats")
 
 
